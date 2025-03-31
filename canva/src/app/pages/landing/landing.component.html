@@ -1,0 +1,31 @@
+<div class="flex flex-wrap justify-center items-center">
+  <p-card [style]="{ width: '25rem', overflow: 'hidden' }">
+    <ng-template #header>
+      <shared-chart [type]="'bar'" [data]="simpleChartData"></shared-chart>
+    </ng-template>
+    <ng-template #title> Simple Chart </ng-template>
+    <p>
+        Using the simple primeng chart module, you can easily create a chart with a simple configuration.
+    </p>
+  </p-card>
+  
+  <p-card [style]="{ width: '25rem', overflow: 'hidden' }">
+    <ng-template #header>
+      <shared-ngx-chart [options]="ngxChartOptions" [theme]="'auto'"></shared-ngx-chart>
+    </ng-template>
+    <ng-template #title> NGX E-Chart </ng-template>
+    <p>
+        Using the Ngx E charts module, you can easily create a chart with a simple configuration.
+    </p>
+  </p-card>
+  
+  <p-card [style]="{ width: '25rem', overflow: 'hidden' }">
+    <ng-template #header>
+      <shared-e-chart [options]="apacheEChartOptions" [theme]="'auto'"></shared-e-chart>
+    </ng-template>
+    <ng-template #title> Apache EChart </ng-template>
+    <p>
+        Using Apache EChart using node.js echarts Module, you can easily create a chart with a simple configuration.
+    </p>
+  </p-card>
+</div>

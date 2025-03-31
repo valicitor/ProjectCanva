@@ -1,0 +1,107 @@
+<div
+  class="w-[100vw] h-[100vh] items-center flex justify-center lg:px-8 md:px-6 px-4"
+>
+  <div
+    class="bg-surface-50 dark:bg-surface-900 p-4 lg:p-6 border border-surface shadow-lg rounded-lg w-full lg:w-6"
+  >
+    <div class="text-center mb-5">
+      <div class="flex gap-2 justify-end">
+        <!-- <darkmode-toggler></darkmode-toggler>
+        <theme-selector></theme-selector> -->
+      </div>
+      <div class="flex justify-center">
+        <app-svg-logo [width]="100" [height]="120"></app-svg-logo>
+      </div>
+      <div class="text-900 text-3xl font-medium mb-3">Get Started Now</div>
+      <span class="text-600 line-height-3"
+        >Enter your credentials to create your account</span
+      >
+    </div>
+
+    <div class="flex flex-col gap-3">
+      <label for="username">Username</label>
+      <input
+        pInputText
+        id="username"
+        placeholder="Username"
+        aria-describedby="username-help"
+        [(ngModel)]="username"
+      />
+
+      <label for="email">Email Address</label>
+      <input
+        pInputText
+        id="email"
+        placeholder="Email Address"
+        aria-describedby="email"
+        [(ngModel)]="email"
+      />
+
+      <label for="password">Password</label>
+      <p-password
+        inputId="password"
+        [(ngModel)]="password"
+        [toggleMask]="true"
+        [fluid]="true"
+        placeholder="Password"
+        autocomplete="off"
+        ariaLabel="Password"
+      >
+        <ng-template #header>
+          <div class="font-semibold text-xm mb-4">Pick a password</div>
+        </ng-template>
+        <ng-template #footer>
+          <p-divider />
+          <ul class="pl-2 ml-2 my-0 leading-normal">
+            <li>At least one lowercase</li>
+            <li>At least one uppercase</li>
+            <li>At least one numeric</li>
+            <li>Minimum 8 characters</li>
+          </ul>
+        </ng-template>
+      </p-password>
+
+      <label for="confirm">Re-enter Password</label>
+      <p-password
+        inputId="confirm"
+        [(ngModel)]="confirm"
+        placeholder="Re-enter Password"
+        [toggleMask]="true"
+        [feedback]="false"
+        [fluid]="true"
+        ariaLabel="Re-enter Password"
+      />
+
+      <div class="flex align-items-center">
+        <p-checkbox
+          id="termsandconditions"
+          [binary]="true"
+          styleClass="mr-2"
+        ></p-checkbox>
+        <label for="termsandconditions" class="text-900"
+          >I read and agree to Terms & Conditions</label
+        >
+      </div>
+
+      <button
+        pButton
+        pRipple
+        label="Register"
+        icon="pi pi-user"
+        class="w-full"
+        routerLink="../overview"
+      ></button>
+
+      <div>
+        <span class="text-600 font-medium line-height-3">
+          Already have an account?
+        </span>
+        <a
+          class="font-medium no-underline text-blue-500 cursor-pointer"
+          routerLink="../sign-in"
+          >Sign in here</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
